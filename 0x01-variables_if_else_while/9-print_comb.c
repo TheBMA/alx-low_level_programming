@@ -14,13 +14,19 @@ int main(void)
 {
 	int x;
 
-	putchar ('0');
 
-	for (x = '1'; x <= '9'; x++)
+
+	for (x = '0'; x <= '9'; x++)
 	{
-		putchar (',');
-		putchar (' ');
 		putchar (x);
+		if (x == '9')
+			putchar ('\n');
+		if (x < '9')
+		{
+			putchar (',');
+			putchar (' ');
+		}
+
 	}
 
 	return (0);

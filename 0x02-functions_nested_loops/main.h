@@ -4,7 +4,7 @@
 /**
  * main - main block
  *
- * Description: header file for 0-putchar.c
+ * Description: header file for 0-putchar.c, 1-alphabet.c
  *
  * Return: 0
  */
@@ -22,4 +22,15 @@ static inline int _putchar(void)
 	putchar('\n');
 
 	return (0);
+}
+
+static inline void print_alphabet(void)
+{
+	int x;
+
+	for (x = 'a'; x <= 'z'; x++)
+		putchar (x);
+
+	putchar ('\n');
+
 }

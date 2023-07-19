@@ -9,7 +9,7 @@
  * Return: 0
  */
 
-int _putchar(void)
+static inline int _putchar(void)
 {
 	putchar('_');
 	putchar('p');

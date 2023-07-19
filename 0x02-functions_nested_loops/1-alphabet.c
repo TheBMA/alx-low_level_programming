@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * main - main block
+ * print_alphabet - prints the alphabet, in lowercase, followed by a new line.
  *
- * Description: a program that prints the alphabet,
- * in lowercase, followed by a new line.
- * Not allowed to use the standard library.
- * Any use of functions like printf, puts, etc… is forbidden.
+ * Prototype: void print_alphabet(void);
+ * only use _putchar twice in your code.
  *
- * Return: 0
+ * Return: void.
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
+	int x;
 
-	return (0);
+	for (x = 'a'; x <= 'z'; x++)
+		_putchar (x);
+
+	_putchar ('\n');
 }

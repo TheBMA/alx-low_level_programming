@@ -1,10 +1,11 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- * Work in progress
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
-
-void _puts(char *s)
+int main(void)
 {
-	//TBD
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }

@@ -50,6 +50,9 @@ char *str_concat(char *s1, char *s2)
 
 	ar = malloc(lengh1 + lengh2 + 1);
 
+	if (ar == NULL)
+		return (NULL);
+
 	while (i < lengh1)
 	{
 		ar[i] = s1[i];

@@ -2,15 +2,10 @@
 #include "main.h"
 
 /**
- * _strlen - a funtion that returns the lengh of a string.
- * *_strdup - a function that returns a pointer to a newly
- * allocated space in memory, which contains a copy of
- * the string given as a parameter.
- * @str: the string to duplicate.
- * Prototype: char *_strdup(char *str);
- * Return: a pointer to the duplicated string.
- * It returns NULL if insufficient memory was available, or if str = NULL.
- * @s: the string to check the lengh for.
+ * _strlen - a function that returns the length of a string.
+ * @s: a pointer to the first character of the string.
+ * Prototype: int _strlen(char *s);
+ * Return: the length of the string.
  */
 
 int _strlen(char *s)
@@ -25,6 +20,15 @@ int _strlen(char *s)
 	return (tmp);
 }
 
+/**
+ * *_strdup - a function that returns a pointer to a newly
+ * allocated space in memory, which contains a copy of
+ * the string given as a parameter.
+ * @str: the string to duplicate.
+ * Prototype: char *_strdup(char *str);
+ * Return: a pointer to the duplicated string.
+ * It returns NULL if insufficient memory was available, or if str = NULL.
+ */
 
 char *_strdup(char *str)
 {

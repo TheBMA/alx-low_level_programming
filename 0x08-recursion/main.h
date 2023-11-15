@@ -11,3 +11,5 @@ int wildcmp(char *s1, char *s2);
 int square_root(int n, int i);
 int last_digit(int n);
 int is_prime(int i, int j);
+int compare_chars(char *s, char *ss);
+char* last_char(char *s);

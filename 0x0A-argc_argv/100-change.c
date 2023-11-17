@@ -49,6 +49,14 @@ int main(int argc, char *argv[])
 	}
 	if ((rest / 5) != 0)
 		rest -= (rest % 5);
+	coins += rest / 2;
+	if ((rest % 2) == 0)
+	{
+		printf("%d\n", coins);
+		return (0);
+	}
+	if ((rest / 2) != 0)
+		rest -= (rest % 2);
 	coins += rest / 1;
 	printf("%d\n", coins);
 	return (0);

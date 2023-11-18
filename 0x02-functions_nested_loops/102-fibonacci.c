@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int _fibonacci(int n);
+long long int _fibonacci(int n);
 
 /**
  * main - a program that prints the first 50 Fibonacci numbers.
@@ -12,15 +12,15 @@ int _fibonacci(int n);
 int main(void)
 {
 	int i;
-	int f;
+	long long int f;
 
 	for (i = 2; i < 50; i++)
 	{
 		f = _fibonacci(i);
-		printf("%d, ", f);
+		printf("%lld, ", f);
 	}
 
-	printf("%d\n", f);
+	printf("%lld\n", f);
 
 	return (0);
 }
@@ -32,9 +32,9 @@ int main(void)
  * * Return: the Fibonacci number for n.
  */
 
-int _fibonacci(int n)
+long long int _fibonacci(int n)
 {
-	int f;
+	long long int f;
 
 	if (n == 0)
 		f = 0;

@@ -16,8 +16,11 @@ int main(void)
 		sum += (i * 3);
 
 	for (j = 0; (j * 5) < 1024; j++)
+	{
+		if ((j * 5) % 3 != 0)
 		sum += (j * 5);
-
+	}
+	
 	printf("%d\n", sum);
 	return (0);
 }

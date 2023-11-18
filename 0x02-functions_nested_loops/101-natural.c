@@ -20,7 +20,7 @@ int main(void)
 		if ((j * 5) % 3 != 0)
 		sum += (j * 5);
 	}
-	
+
 	printf("%d\n", sum);
 	return (0);
 }

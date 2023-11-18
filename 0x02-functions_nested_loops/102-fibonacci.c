@@ -20,7 +20,7 @@ int main(void)
 		printf("%d, ", f);
 	}
 
-	printf("%d\n", /**/);
+	printf("%d\n", f);
 
 	return (0);
 }

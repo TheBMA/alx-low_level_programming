@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-unsigned long int _fibonacci(int n);
-
 /**
  * main - a program that prints the first 50 Fibonacci numbers.
  * starting with 1 and 2, followed by a new line.
@@ -12,38 +10,22 @@ unsigned long int _fibonacci(int n);
 int main(void)
 {
 	int i;
-	unsigned long int f;
+	unsigned long int n, n1, n2;
 
-	for (i = 2; i < 50; i++)
+	n1 = 1;
+	n2 = 0;
+
+	for (i = 2; i <= 50; i++)
 	{
-		f = _fibonacci(i);
-		printf("%lu, ", f);
+		n = n1 + n2;
+
+		printf("%lu, ", n);
+
+		n2 = n1;
+		n1 = n;
 	}
 
-	printf("%lu\n", f);
+	printf("%lu\n", n1 + n2);
 
 	return (0);
-}
-
-/**
- * _fibonacci - a funtion that returns the Fibonacci number for n.
- * Pototype: unsigned long int _fibonacci(int n);
- * @n: an integer.
- * * Return: the Fibonacci number for n.
- */
-
-unsigned long int _fibonacci(int n)
-{
-	unsigned long int f;
-
-	if (n == 0)
-		f = 0;
-
-	if (n == 1)
-		f = 1;
-
-	if (n > 1)
-		f = _fibonacci(n - 1) + _fibonacci(n - 2);
-
-	return (f);
 }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-long long int _fibonacci(int n);
+long int _fibonacci(int n);
 
 /**
  * main - a program that prints the first 50 Fibonacci numbers.
@@ -12,29 +12,29 @@ long long int _fibonacci(int n);
 int main(void)
 {
 	int i;
-	long long int f;
+	long int f;
 
 	for (i = 2; i < 50; i++)
 	{
 		f = _fibonacci(i);
-		printf("%lld, ", f);
+		printf("%lu, ", f);
 	}
 
-	printf("%lld\n", f);
+	printf("%lu\n", f);
 
 	return (0);
 }
 
 /**
  * _fibonacci - a funtion that returns the Fibonacci number for n.
- * Pototype: int _fibonacci(int n);
+ * Pototype: long int _fibonacci(int n);
  * @n: an integer.
  * * Return: the Fibonacci number for n.
  */
 
-long long int _fibonacci(int n)
+long int _fibonacci(int n)
 {
-	long long int f;
+	long int f;
 
 	if (n == 0)
 		f = 0;

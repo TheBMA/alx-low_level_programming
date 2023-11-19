@@ -17,10 +17,10 @@ int main(void)
 	for (i = 2; i < 50; i++)
 	{
 		f = _fibonacci(i);
-		printf("%lu, ", f);
+		printf("%ld, ", f);
 	}
 
-	printf("%lu\n", f);
+	printf("%ld\n", f);
 
 	return (0);
 }

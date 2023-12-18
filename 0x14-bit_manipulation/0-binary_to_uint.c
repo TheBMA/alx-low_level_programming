@@ -3,7 +3,7 @@
 /**
  * pow_of_two - a function that calculates powers of 2
  * Prototype: unsigned int pow_of_two(unsigned int n);
- * n: the exponent.
+ * @n: the exponent.
  * Return: the result of raising 2 to the power of n.
  */
 

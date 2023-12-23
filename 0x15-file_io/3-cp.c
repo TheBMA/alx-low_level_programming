@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
 	while ((bytesRead = read(fromDescriptor, buffer, sizeof(buffer))) > 0)
 	{
-		if (fromDescriptor == -1 || bytesRead == -1)
+		if (bytesRead == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			close(fromDescriptor);
@@ -51,6 +51,14 @@ int main(int argc, char *argv[])
 			close(toDescriptor);
 			exit(99);
 		}
+	}
+
+	if (bytesRead == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		close(fromDescriptor);
+		close(toDescriptor);
+		exit(98);
 	}
 
 	if (close(fromDescriptor) == -1)

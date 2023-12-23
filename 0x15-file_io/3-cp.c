@@ -24,12 +24,21 @@ int main(int argc, char *argv[])
 	fromDescriptor = open(file_from, O_RDONLY);
 	toDescriptor = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
+	if (fromDescriptor == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			close(fromDescriptor);
+			close(toDescriptor);
+			exit(98);
+		}
+
 	while ((bytesRead = read(fromDescriptor, buffer, sizeof(buffer))) > 0)
 	{
 		if (fromDescriptor == -1 || bytesRead == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			close(fromDescriptor);
+			close(toDescriptor);
 			exit(98);
 		}
 

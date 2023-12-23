@@ -25,7 +25,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		for (i = 0; text_content[i] != '\0'; i++)
 			text_size++;
 
-		bytesWritten = write(fileDescriptor, text_content, text_size + 1);
+		bytesWritten = write(fileDescriptor, text_content, text_size);
 		if (bytesWritten == -1)
 		{
 			close(fileDescriptor);
